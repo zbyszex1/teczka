@@ -1,0 +1,12 @@
+{
+  "router": "other/tw",
+  "routerDet": "other/tw0",
+  "thumbs": "/assets/other/tw0/thumbs/",
+  "pages": "/assets/other/tw0/pages/",
+  "pdf": "/assets/pdf/tw.pdf",
+  "header": "Nazwiska TW",
+  "description": "Kolejne informacje o rozszyfrowaniu nazwisk tajnych współpracowaników SB",
+  "offset": "6",
+  "min": "001",
+  "max": "005"
+}

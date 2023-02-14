@@ -1,0 +1,12 @@
+{
+  "router": "other/kor",
+  "routerDet": "other/kor6",
+  "thumbs": "/assets/other/kor6/thumbs/",
+  "pages": "/assets/other/kor6/pages/",
+  "pdf": "/assets/pdf/2021-04/BU_941_350.pdf",
+  "header": "BU 941 350",
+  "description": "Materiały IPN przekazane na płycie CD w kwietniu 2021",
+  "offset": "6",
+  "min": "001",
+  "max": "009"
+}

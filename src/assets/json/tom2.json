@@ -1,0 +1,12 @@
+{
+  "router": "tom2",
+  "routerDet": "tom2",
+  "thumbs": "/assets/vol2/thumbs/",
+  "pages": "/assets/vol2/pages/",
+  "pdf": "/assets/pdf/205-04/BU_0222_92_t_2.pdf",
+  "header": "0222/92 <small>tom</small> <b>II</b>",
+  "description": "Materiały IPN przekazane na płycie CD 22 kwietnia 2015",
+  "offset": "b",
+  "min": "001",
+  "max": "183"
+}

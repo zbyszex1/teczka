@@ -1,0 +1,12 @@
+{
+  "router": "other/jail",
+  "routerDet": "other/jail",
+  "thumbs": "/assets/other/jail/thumbs/",
+  "pages": "/assets/other/jail/pages/",
+  "pdf": "/assets/pdf/2020-10/IPN_Wa_S_28.2005.Zk.pdf",
+  "header": "IPN Wa S 28 2005 Zk",
+  "description": "Materiały IPN przekazane na płycie CD w październiku 2020",
+  "offset": "1",
+  "min": "001",
+  "max": "022"
+}

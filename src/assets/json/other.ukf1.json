@@ -1,0 +1,12 @@
+{
+  "router": "other/ukf",
+  "routerDet": "other/ukf1",
+  "thumbs": "/assets/other/ukf1/thumbs/",
+  "pages": "/assets/other/ukf1/pages/",
+  "pdf": "/assets/pdf/2021-04/BU_0_1322_1872.pdf",
+  "header": "BU 0 1322 1872",
+  "description": "Materiały IPN przekazane na płycie CD w kwietniu 2021",
+  "offset": "1",
+  "min": "001",
+  "max": "029"
+}

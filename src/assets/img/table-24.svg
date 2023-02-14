@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   id="body_1"
+   width="24"
+   height="24"
+   version="1.1"
+   sodipodi:docname="table-24.svg"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs9" />
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="9.8333333"
+     inkscape:cx="9.6101695"
+     inkscape:cy="12"
+     inkscape:window-width="1920"
+     inkscape:window-height="1057"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer1"
+     inkscape:label="background">
+    <rect
+       style="fill:#ffffff"
+       id="rect294"
+       width="16.372881"
+       height="16.576271"
+       x="3.9661016"
+       y="3.7627118"
+       ry="0.62941879" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="foreground">
+    <g
+       transform="scale(0.5)"
+       id="g4">
+      <path
+         d="M6 42L6 6L42 6L42 42L6 42zM9 17L39 17L39 9L9 9zM20 28L28 28L28 20L20 20zM20 39L28 39L28 31L20 31zM9 28L17 28L17 20L9 20zM31 28L39 28L39 20L31 20zM9 39L17 39L17 31L9 31zM31 39L39 39L39 31L31 31z"
+         stroke="none"
+         fill="#000000"
+         fill-rule="nonzero"
+         id="path2" />
+    </g>
+  </g>
+</svg>

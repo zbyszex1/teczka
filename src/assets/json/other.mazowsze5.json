@@ -1,0 +1,12 @@
+{
+  "router": "other/mazowsze",
+  "routerDet": "other/mazowsze5",
+  "thumbs": "/assets/other/mazowsze5/thumbs/",
+  "pages": "/assets/other/mazowsze5/pages/",
+  "pdf": "/assets/pdf/2021-04/BU_0_247_1087_16.pdf",
+  "header": "BU 0 247 1087 t.16 <small>część 5</small> ",
+  "description": "Materiały IPN przekazane na płycie CD w kwietniu 2021",
+  "offset": "5",
+  "min": "001",
+  "max": "007"
+}

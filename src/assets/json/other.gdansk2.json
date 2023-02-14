@@ -1,0 +1,12 @@
+{
+  "router": "other/gdansk",
+  "routerDet": "other/gdansk2",
+  "thumbs": "/assets/other/gda2/thumbs/",
+  "pages": "/assets/other/gda2/pages/",
+  "pdf": "/assets/pdf/2015-04/IPN_Gd_286_1_t2.pdf",
+  "header": "<b>Gdańsk</b> PN Gd 286/1 t2 <small>część 2</small> ",
+  "description": "Materiały IPN przekazane na płycie CD 22 kwietnia 2015",
+  "offset": "2",
+  "min": "001",
+  "max": "022"
+}

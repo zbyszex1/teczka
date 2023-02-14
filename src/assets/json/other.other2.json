@@ -1,0 +1,12 @@
+{
+  "router": "other/other",
+  "routerDet": "other/other2",
+  "thumbs": "/assets/other/other2/thumbs/",
+  "pages": "/assets/other/other2/pages/",
+  "pdf": "/assets/pdf/2021-04/BU_529_23.pdf",
+  "header": "Lista inernowanych v.2",
+  "description": "Dokumenty otrzymane na płycie CD w kwietniu 2021",
+  "offset": "2",
+  "min": "001",
+  "max": "013"
+}
