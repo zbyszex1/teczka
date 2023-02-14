@@ -1,0 +1,15 @@
+@use './../../../colors';
+
+.back {
+  background-color: rgba(0,0,0,0.25);
+  width: fit-content;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+// .grid-container > div {
+//   border: 1px solid colors.$primary_ll;
+// }

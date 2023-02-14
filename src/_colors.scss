@@ -1,0 +1,13 @@
+$primary: rgb(142, 56, 6); 
+
+$primary_d: darken($primary, 10%);
+$primary_l: lighten($primary, 10%);
+$primary_dd: darken($primary, 20%);
+$primary_ll: lighten($primary, 20%);
+
+$background: rgba(202, 162, 122, 1.00);
+$background0: rgba(202, 162, 122, 0.25);
+$background1: rgba(255, 255, 255, 0.5);
+$background2: rgba(160, 104, 1, 0.5);
+
+$border: rgba(64, 66, 66, 0.50)

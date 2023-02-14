@@ -1,0 +1,57 @@
+@use './../../../colors';
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+}
+
+.grid-frame {
+  border: 1px solid colors.$primary_ll;
+}
+
+.container-img {
+  position: relative;
+}
+
+.help-aera {
+  display: grid;
+  grid-template-columns: repeat( 5, 1fr);
+  // grid-template-rows: repeat(6, 1fr);
+  // position: absolute;
+}
+
+.help-aera > div {
+  // border: 1px dotted red;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.help-info {
+  background-color: transparent;
+  grid-column-start: 1;
+  grid-column-end: span 3;
+}
+
+.help-key {
+  background-color: transparent;
+  grid-column-start: 4;
+}
+
+.help-cursor {
+  background-color: transparent;
+  grid-column-start: 5;
+}
+
+.help-desc {
+  background-color: transparent;
+  grid-column-start: 1;
+  grid-column-end: span 4;
+}
+
+.help-table {
+  background-color: transparent;
+  grid-column-start: 5;
+  grid-column-end: span 1;
+}

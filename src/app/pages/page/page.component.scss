@@ -1,0 +1,118 @@
+@use './../../../colors';
+
+.back {
+  // background-color: rgba(0,0,0,0.25);
+  width: fit-content;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+}
+
+.grid-frame {
+  border: 1px solid colors.$primary_ll;
+}
+
+.container-img {
+  position: relative;
+}
+
+.cursors-aera {
+  display: grid;
+  grid-template-columns: repeat( 5, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  position: absolute;
+}
+
+.cursors-aera > div {
+  // border: 1px dotted red;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cursors-home {
+  background-color: transparent;
+  grid-column-start: 1;
+  grid-row-start: 1; 
+}
+
+.cursors-list {
+  background-color: transparent;
+  grid-column-start: 2;
+  grid-column-end: span 3;
+  grid-row-start: 1; 
+}
+
+.cursors-left {
+  background-color: transparent;
+  grid-column-start: 1;
+  grid-row-start: 2; 
+  grid-row-end: span 5;
+}
+
+.cursors-zoom-in {
+  background-color: transparent;
+  grid-column-start: 2;
+  grid-column-end: span 3;
+  grid-row-start: 2; 
+  grid-row-end: span 4; 
+}
+
+.cursors-right {
+  background-color: transparent;
+  grid-column-start: 5;
+  grid-row-start: 2; 
+  grid-row-end: span 5; 
+}
+
+.cursors-print {
+  background-color: transparent;
+  grid-column-start: 2;
+  grid-column-end: span 3;
+  grid-row-start: 6;
+}
+
+.cursor-home {
+  cursor: url("/assets/img/home-24.svg") 12 12, auto;
+}
+
+.cursor-list {
+  cursor: url("/assets/img/table-24.svg") 12 12, auto;
+}
+
+.cursor-left {
+  cursor: url("/assets/img/left-24.svg") 12 12, auto;
+}
+
+.cursor-right {
+  cursor: url("/assets/img/right-24.svg") 12 12, auto;
+}
+
+.cursor-print {
+  cursor: url("/assets/img/print-24.svg") 12 12, auto;
+}
+
+.cursor-zoom-in {
+  cursor: zoom-in;
+  // cursor: url("/assets/img/zoom-in.svg") 24 24, auto;
+}
+
+.cursor-zoom-out {
+  cursor: zoom-out;
+  // cursor: url("/assets/img/zoom-out.svg") 24 24, auto;
+}
+.cursors-hide {
+  visibility: hidden;
+}
+
+#zoom-aera {
+  overflow-x: auto;
+  cursor: zoom-out;
+}
+
+#pageImg {
+  transition: width 0.5s, height 0.5s;
+}

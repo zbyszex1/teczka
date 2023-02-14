@@ -1,0 +1,6 @@
+<span *ngFor="let number of numbers; first as isFirst">
+  <i *ngIf="!isFirst">, </i>
+  <a class="link" href="{{path + number}}" target="_blank">
+    {{number}}
+  </a>
+</span>

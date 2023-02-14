@@ -1,0 +1,186 @@
+<app-herobar class="main-header">
+  <h2 class="display-3 back">Materiały Instytutu Pamięci Narodowej</h2>
+  <h4 class="pt-4 back">kryptinim "Inżynier"</h4>
+  <h4 class="pt-4 back">nr ewidencyjny 72800</h4>
+</app-herobar>
+
+<!-- My work in numbers -->
+<div class="container">
+  <h2 class="mt-4 text-center">Ilość stron dokumentów</h2>
+  <hr/>
+  <div class="d-flex flex-column flex-md-row justify-content-around pb-5">
+    <app-odometer [value]="284" label="Tom 1"></app-odometer>
+    <app-odometer [value]="183" label="Tom 2"></app-odometer>
+    <app-odometer [value]="594" label="Inne materiały"></app-odometer>
+  </div>
+</div>
+
+<!-- <app-open-close></app-open-close> -->
+<div class="container"
+  appWhenVisible
+  #visRef="whenVisible"
+>
+  <h2 class="mt-4 text-center">teczka IPN 0222/92</h2>
+  <div class="row py-4">
+    <div class="col" >
+      <p appSlideIn="left" [delay]="500">
+        W serwicie przedstawiam materiały uzyskane przeze mnie z Instytutu Pamieci Narodowej w latach 2004-2021.
+        Z wnioskiem o udostepnienie materiałow archiwalnych gromadzonych na mój temat wystąpiłem chyba w roku 2000.
+        4 czerwca 2001 Piotr Chruszczyński - ówczesny dyrektor oddziału w Warszawie poinformował mnie, iż termin
+        realizacji mojego wnioski ulegnie przesunięciu. I rzeczywiście. pierwsze materiały dostałem dopiero 13 marca 2004.
+      </p>
+      <p appSlideIn="left" [delay]="1000">
+        Było to ksero zawartości trzech teczek zszyte kolorowym sznurkiem i opieczętowane. Dwie pokaźnej grubości,
+        trzecia cieniutka. Nazwiska zostały zamazane.
+        Niektórych mogłem się domyśleć. Większości - nie. Jeżeli była to lista uczestników zebrania - zwykle parę osób
+        pamietałem. Stopniowo dostawałem inne materiałmy: rozszyfrowanych pracowników SB, tajnych współpracowaników (TW)
+        oraz innych źródeł informacji takich jak kontakt operacyjny czy podsłuch telefoniczny.
+      </p>
+      <a class="link" [hidden]="readmore" (click)="readMore()">Pokaż więcej</a>
+
+      <div *ngIf="readmore" appSlideIn="right">
+        <p>
+          Ponieważ już straciłem trochę czasu na przeczytanie materiałów wskażę odnośniki do bardziej (moim zdaniem)
+          interesujących tematów. Najbardziej interesowali mnie donosiciele nazywani fachowo TW. Na początku zaznaczę od
+          wskazania stron, na których znajdują się meldunki opracowanie na podstawie informacji kapusiów.
+        </p>
+        <div class="grid-container">
+          <div>TW Rafał</div>
+          <div>tom 1, karty: <app-pages-list
+            path="/tom1/"
+            pages="68, 82, 83, 86, 222, 237"
+            ></app-pages-list>
+          </div>
+          <div>TW Anna</div>
+          <div>tom 1, karty: <app-pages-list
+            path="/tom1/"
+            pages="70, 82, 88, 92, 93, 95, 98, 103, 105, 231, 240, 248, 249, 253, 254, 261, 265"
+            ></app-pages-list>
+            ; tom 2, karty: <app-pages-list
+            path="/tom2/"
+            pages="21, 23, 25, 27, 28, 31, 34, 108, 110, 111, 114, 121, 125, 126, 142, 143"
+            ></app-pages-list>
+          </div>
+          <div>TW Ryszard</div>
+          <div>tom 2, karta: <app-pages-list
+            path="/tom2/"
+            pages="120"
+            ></app-pages-list>
+          </div>
+          <div>TW Zabłocki</div>
+          <div>tom 2, karta: <app-pages-list
+            path="/tom2/"
+            pages="144"
+            ></app-pages-list>
+          </div>
+          <div>TW Piegus</div>
+          <div>tom 1, karta: <app-pages-list
+            path="/tom1/"
+            pages="66"
+            ></app-pages-list>
+          </div>
+        </div>
+        <p></p>
+      </div>
+      <div *ngIf="readmore2" appSlideIn="right" >
+        <p>
+          Do 10 maja 2006 sądziłem, że wymienione niżej kryptonimy również odnoszą się do tajnych współpracowników. 
+          ego dnia odbierałem z IPNu noty dotyczące danych identyfikacyjnych informatorów o kryptonimach Ryszard
+          oraz Zabłocki i dowiedziałem się, iż źródło nie musi oznaczać kapusia. Może to być podsłuch telefoniczny
+          lub podsłuch mieszkania. Jakież było moje zdziwienie, gdy dowiedziałem się kim jest Satrapa. To ... ja.
+          Oczywiście nie składałem donosów sam na siebie. Kryptonim oznaczał podsłuch telefoniczny -
+          najprawdopodobniej w mieszkaniu moich rodziców.
+        </p>
+        <div class="grid-container">
+          <div>Satrapa</div>
+          <div>tom 1, karty: <app-pages-list
+            path="/tom1/"
+            pages="72, 90, 101, 123, 209, 230, 238, 239"
+            ></app-pages-list>
+          </div>
+          <div>Warta</div>
+          <div>tom 1, karty: <app-pages-list
+            path="/tom1/"
+            pages="117, 119, 149, 163, 168"
+            ></app-pages-list>
+          </div>
+          <div>Graf</div>
+          <div>tom 1, karta: <app-pages-list
+            path="/tom1/"
+            pages="72"
+            ></app-pages-list>
+            tom 2, karta: <app-pages-list
+            path="/tom2/"
+            pages="29"
+            ></app-pages-list>
+          </div>
+        </div>
+        <p></p>
+        <br/>
+        <p>Angażując się w działalność opozycyjną oczywiście liczyłem się z pewnymi szykanami. Trzeba przyznać, że
+          <i>władza ludowa</i> była względnie łagodna. Wstrzymywano mi zaledwie paszport
+          <app-pages-list path="/tom1/" pages="142, 187, 231"></app-pages-list>
+           , prowadzono inwigilację 
+           <app-pages-list path="/tom1/" pages="114, 189, 201, 229, 230"></app-pages-list>
+           czy podkręcano rodzinne nieporozumienia 
+           <app-pages-list path="/tom1/" pages="207"></app-pages-list>.
+           Zabawne jest jak wysocy funkcjonariusze (generałowie wojska i milicji) byli zaangażowani w wyślizganie mnie z
+           prac zleconych
+           <app-pages-list path="/tom1/" pages="143, 146"></app-pages-list>.
+        </p>
+        <p>
+          Ponieważ w SB pracowało kilkadziesiąt tysięcy ludzi i pomagała im jeszcze milicja - musiało być widać efekty pracy.
+          Teczka pęczniała więc od analiz
+          <app-pages-list path="/tom1/" pages="34, 75"></app-pages-list> oraz planów przedsięwzięć operacyjnych
+          <app-pages-list path="/tom1/" pages="24, 85, 236"></app-pages-list>. W materiałach znajdują się takie głupoty jak
+          "szyfrogram tajne specjalnego znaczenia - egzemplarz pojedynczy"
+          <app-pages-list path="/tom1/" pages="226"></app-pages-list>.
+        </p>
+        <p>
+          Nie mogło zabraknąć również materiałów dotyczących próby zorganizowania przeze mnie manifestacji pod ambasadą Iranu
+          (również biuletynów nasłuchu audycji radia "Wolna Europa")
+          <app-pages-list path="/tom1/" pages="108, 127"></app-pages-list>.
+          Od siebie dodałem oryginalną audycję w formacie MP3.
+          Pokaźną ilość mają też opisy mojego jednoosobowego strajku i rozrzucenia ulotek z gmachu Polskiej Agencji Prasowej:
+          <app-pages-list path="/tom1/" pages="173, 178, 184, 190, 195, 198, 214, 216"></app-pages-list>.
+          Strajku - a właściwie żądań socjalnych jest mi dzisiaj wstyd, ale cóż - byłem znacznie młodszy.
+        </p>
+        <p>
+          <audio controls>
+            <source src="./../../../assets/rwe.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+        </p>
+        <p>
+          Drugi tom jest poświęcony głównie zakładanemu przy moim udziale stowarzyszeniu "Patronat".
+          Ta antysocjalistyczna organizacja
+          <app-pages-list path="/tom2/" pages="156"></app-pages-list>
+          stawiała sobie za cel wspomaganie osób uwięzionych i ich rodzin.
+          Teczka w dalszym ciągu pęczniała od analiz <app-pages-list path="/tom2/" pages="51"></app-pages-list>,
+          wniosków <app-pages-list path="/tom2/" pages="63"></app-pages-list>,
+          kwestionariuszy <app-pages-list path="/tom2/" pages="65"></app-pages-list>,
+          opinii <app-pages-list path="/tom2/" pages="146"></app-pages-list>
+          i notatek <app-pages-list path="/tom2/" pages="167"></app-pages-list>.
+          Gdzie niegdzie są jeszcze drobne ślady szykan - zakładanie podsłuchu
+          <app-pages-list path="/tom2/" pages="112, 120"></app-pages-list>, czy sprawy paszportowe ojca
+          <app-pages-list path="/tom2/" pages="122"></app-pages-list>.
+          Nie dowiem się nigdy co było w zniszczonych materiałach:
+          <app-pages-list path="/tom2/" pages="150, 154"></app-pages-list>.
+          Dziwnym trafem ubecja nie próbowała fałszować mojej lojalki, ograniczając się do podania skrótowej informacji o tym
+          co myślę na temat złożenia podpisu pod takim dokumentem:
+          <app-pages-list path="/tom2/" pages="146"></app-pages-list>.
+        </p>
+        <p>
+          Kilka kartek trzeciego tomu było chyba skompletowanych przez IPN w ostatniej chwili i nie mam tam moim zdaniem nic
+          specjalnie interesującego. Przekazane mi w 2015 rpku płyty CD nawet nie zawierały tego tomu.
+        </p>
+        <p>
+          Z lektury teczki wywnioskowałem jednak, że ubecja znała w zasadzie tylko jawne działania. Sprawy zaopatrzenia,
+          kolportażu wydawnictw (przyznaję się bez bicia - nie drukowałem) i transportu wydają się być poza zasięgiem władz.
+          I to mnie do tej pory bardzo cieszy.
+        </p>
+        <span id="bottom"></span>
+      </div>
+    </div>
+  </div>
+</div>

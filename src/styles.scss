@@ -1,0 +1,249 @@
+@use './colors';
+
+
+body{
+  overflow-x: hidden;
+  background-image: linear-gradient(135deg, colors.$background1, colors.$background2);
+}
+
+@import "~/../../node_modules/bootstrap/dist/css/bootstrap.css";
+@import "~/../../node_modules/odometer/themes/odometer-theme-default.css";
+
+html{
+  scroll-behavior: smooth;
+}
+
+// .flex-grow-1 {
+//   margin-top: 56px;
+// }
+
+// .navbar {
+//   position: fixed;
+//   width: 100%;
+// }
+
+.main-header {
+  height: 50hv;
+  min-height: 00px;;
+}
+
+.full-bg-gradient {
+  background: -webkit-linear-gradient(
+    45deg,
+    rgba(234, 21, 129, 0.6),
+    rgba(10, 23, 187, 0.6) 100%
+  );
+}
+
+.full-bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+}
+
+.bg-section {
+  background: url("assets/img/archive-at-the-former-ipn-headquarters-in-warsaw.jpg");
+  width: 100vw;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  padding: 12rem 0;
+}
+
+
+.slideIn.up {
+  transform: translateY(100%);
+}
+
+.slideIn.left {
+  transform: translateX(-100%);
+}
+.slideIn.right {
+  transform: translateX(100%);
+}
+
+.slideIn.up,
+.slideIn.left,
+.slideIn.right {
+  opacity: 0;
+  transition: all 0.5s ease-in;
+}
+
+.slideIn.up.animate,
+.slideIn.left.animate,
+.slideIn.right.animate{
+  opacity: 1;
+  transform: translate(0%, 0%);
+}
+
+input {
+  margin-bottom: 1.0rem;
+}
+
+textarea {
+  margin-top: 1.0rem;;
+  margin-bottom: 1.0rem;;
+}
+
+button {
+  margin-top: 1.0rem;
+  margin-right: 20px;
+}
+
+
+.btn-danger {
+  background-color: rgb(129, 68, 68);
+  border: 1px solid gray;
+  &:hover {
+    background-color: rgb(177, 92, 92);
+  }
+  &:disabled {
+    background-color: silver;
+  }
+}
+
+.btn-primary {
+  background-color: colors.$primary;
+  border: 1px solid colors.$primary_l;
+  &:hover {
+    background-color: colors.$primary_l;
+  }
+  &:disabled {
+    background-color: silver;
+  }
+}
+
+.error_message {
+  color: rgb(202, 2, 2);
+}
+
+.success_message {
+  color: rgb(0, 128, 0);
+}
+
+
+.link {
+  color: colors.$primary_l;
+  font-weight: 600;
+  text-decoration: none;
+  text-shadow:0.1em darkgray;
+  cursor: pointer;
+  &:hover {
+    color: colors.$primary;
+  }
+  &:visited {
+    color: colors.$primary;
+  }
+}
+
+.resume-details-wrapper {
+  padding-right: 30px;
+  margin-right: -30px;
+  max-height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  // background: lightgoldenrodyellow;
+}
+
+.item-details-header {
+   padding-top: 10px;
+  padding-bottom: 25px;
+  // border-bottom: 1px solid #ececec;
+}
+
+.item-details-title {
+  font-weight: 500;
+  margin-bottom: 0px;
+  color: colors.$primary;
+}
+
+.item-details-caption {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+.container-img {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 25px;
+}
+
+.thumb-outher {
+  width: 134px;
+  margin: 5px;
+  text-align: center;
+}
+
+.thumb-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 185px;
+  background-color: colors.$background0;
+}
+
+.thumb-img {
+  max-width: 124px;
+  margin-left: 1px;
+  padding: 5px;
+  transition: transform 0.5s;
+  // &:hover {
+  //   transform: scale(2);
+  //   padding: 3px;
+  //   background-color: colors.$background;
+  //   border: 1px solid colors.$border;
+  // }
+}
+.thumb-zoom {
+    transform: scale(2);
+    padding: 3px;
+    background-color: colors.$background;
+    border: 1px solid colors.$border;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.white {
+  background-color: white;
+}
+@media print {
+  .container-img {
+    padding: 0;
+  }
+
+  .item-details-header {
+    padding: 0;
+  }
+
+  h4 {
+    color: black;
+  }
+
+  p {
+    color: black;
+  }
+
+  .printable {
+    visibility: visible;
+  }
+
+  .no-printable {
+    display: none;
+    visibility: hidden;
+  }
+}
+
