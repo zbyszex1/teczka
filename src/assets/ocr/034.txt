@@ -1,0 +1,11 @@
+Lp. NAZWISKO 1 IMIE imię ojca 9 
+301 Pawlak Bogdan
+302 Perkowski Czesław
+393 Pernach Waldemar
+304 Piaseczny Leszek
+305 Plewako Stanisław
+306 Polkowski Jacek
+307 Potapowicz Jaroslaw
+308 Przetacki Lech
+309 Przewłocki Jant
+310 Przybył Włodzimierz
