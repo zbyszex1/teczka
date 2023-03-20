@@ -61,6 +61,7 @@ export class ThumbsListComponent implements OnInit{
  ngOnInit(): void {
     const fragment = this.route.snapshot.fragment;
     const els = document.getElementsByClassName('thumb-outher');
+console.log('/assets/json/' +this.jsonPath + '.json');
     this.http.get('/assets/json/' +this.jsonPath + '.json')
     .subscribe({
       next: (data) => { 

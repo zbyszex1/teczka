@@ -19,6 +19,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { ConditionsComponent } from './pages/conditions/conditions.component';
 import { HelpComponent } from './pages/help/help.component';
+import { BlankComponent } from './pages/blank/blank.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 
 const routes: Routes = [
@@ -118,6 +119,18 @@ const routes: Routes = [
   {
     path: 'other/ukf',
     component: UkfComponent,
+  },
+  {
+    path: 'other/ukf1/:page_number',
+    component: PageComponent,
+  },
+  {
+    path: 'other/ukf2/:page_number',
+    component: PageComponent,
+  },
+  {
+    path: 'other/ukf3/:page_number',
+    component: PageComponent,
   },
   {
     path: 'other/kor',
@@ -230,6 +243,10 @@ const routes: Routes = [
   {
     path: 'page-not-found',
     component: PageNotFoundComponent
+  },
+  {
+    path: 'blank',
+    component: BlankComponent,
   },
   {
     path: '**',
