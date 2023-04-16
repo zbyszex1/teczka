@@ -1,0 +1,43 @@
+<div class="container printable">
+    <h2 class="mt-4 text-center">Indeks nazwisk</h2>
+    <div class="help-aera">
+        <div class="help-image">
+          <img src="@/../../../../assets/img/under-construction.jpg" width="204" height="86"/>
+        </div>
+        <div class="help-text">
+          <p>
+            Prace nad indeksem nazwisk zostały dopiero rozpoczęte. Kończę aplikację webową w oparciu
+            o .Net Core, MySQL i Angular. Niedługo ją udostępnię. Pozwoli ona wolontariuszom dołożyć
+            swój wkład w trworzenie indeksu. Niestety, praca jest żmudna. Trzeba przeczytać każdy dokument
+            i albo wybrać z listy nazwisko osoby, która pojawiła sie wcześniej, albo dodać nowe nazwisko.
+            Będę wdzięczny za współpracę oraz wskazanie błędów. Kilkaset nazwisk zostało półautomatycznie
+            dodanych po przepuszczeniu przez OCR listy internowanych ówczesnego województwa warszawskiego.
+            Możliwe są zatem błędy typu cyfra jeden zamiast litery el. Innym problemem moga być polskie znaki.
+            W końcu imiona zaisane w bazie danych na podstawie pierwszej litery.
+          </p>
+          <p>
+            Dotychczasowe zaawansowanie tworzenia indeksu oceniam na 10%.
+          </p>
+        </div>
+    </div>
+    <div class="row py-4">
+      <div class="col">
+        <p>
+        </p>
+      </div>
+      <div *ngIf="ready">
+        <div *ngFor="let index of indexes">
+            <b>{{index.name}}</b>
+            <br/>
+            <div *ngFor="let unit of index.units">
+                <span>{{unit.display}}</span>
+                <span *ngFor="let page of unit.pages; let i = index">
+                <span *ngIf="i==0">: </span>
+                <span *ngIf="i>0">, </span>
+                <a [href]="unit.path+'/'+fillZeros(page)" target="_blank" class="link"><b>{{page}}</b></a>
+                </span>
+            </div>
+      </div>
+    </div>
+</div>
+</div>

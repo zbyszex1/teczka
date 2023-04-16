@@ -96,12 +96,28 @@ export class PageComponent implements OnInit {
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
       const pageNumber = (params.get('page_number'))
-      let urls = this.route.snapshot.url;
       let jname = '';
-      if (urls.length > 0)
-        jname = urls[0].path;
-      if (urls.length > 2)
-        jname += '.' + urls[1].path;
+      let parentss = this.route.parent?.url;
+      parentss?.forEach(parents => {
+        parents.forEach(parent => {
+          console.log(parent.path)
+          if (parent.path.length > 1) {
+            jname += parent + '.';
+          }
+        })
+      })
+      let urls = this.route.snapshot.url;
+      for (let i=0; i< this.route.snapshot.url.length - 1; i++) {
+        if (i > 0) {
+          jname += '.';
+        }
+        jname += urls[i].path
+      }
+      console.log(jname)
+      // if (urls.length > 0)
+      //   jname = urls[0].path;
+      // if (urls.length > 2)
+      //   jname += '.' + urls[1].path;
       if (pageNumber !== null && typeof pageNumber !== undefined) {
         this.clearDimensions();
         this.http.get('/assets/json/' +jname + '.json')

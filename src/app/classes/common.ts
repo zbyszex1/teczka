@@ -19,9 +19,9 @@ export class Common {
     let numbers = new Array<string>(num);
     for(let i=0; i<num; i++) {
       let i_str = (i+pMin).toString();
-      if (i < 99)
+      if (i <= 99)
         i_str = '0' + i_str;
-      if (i < 9)
+      if (i <= 9)
         i_str = '0' + i_str;
       numbers[i] = i_str;
     }

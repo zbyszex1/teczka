@@ -35,6 +35,7 @@ import { HelpComponent } from './pages/help/help.component';
 import { SendersComponent } from './pages/senders/senders.component';
 import { JailComponent } from './pages/jail/jail.component';
 import { BlankComponent } from './pages/blank/blank.component';
+import { IndeksComponent } from './pages/indeks/indeks.component';
 
 @NgModule({
   declarations: [
@@ -69,6 +70,7 @@ import { BlankComponent } from './pages/blank/blank.component';
     SendersComponent,
     JailComponent,
     BlankComponent,
+    IndeksComponent,
   ],
   imports: [
     FormsModule,
