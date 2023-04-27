@@ -22,3 +22,12 @@
     grid-column-end: span 3;
   }
   
+  .sort-inactive{
+    filter: grayscale(1) opacity(33%) ;
+    cursor: default;
+  }
+
+  .sort-active{
+    filter: hue-rotate(100);
+    cursor: pointer;
+  }
