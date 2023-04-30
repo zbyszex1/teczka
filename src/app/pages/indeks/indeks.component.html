@@ -31,12 +31,34 @@
       <div class="col">
         <img src="../../../assets/img/sort-alpha.svg" id="sortAlpha" class="sort-inactive" (click)="sortAlpha()"/>
         &nbsp;
+        <label for="sortAlpha">Sort. Alfa.</label>
+        &nbsp;
         <img src="../../../assets/img/sort-num.svg" id="sortNum" class="sort-active" (click)="sortNum()"/>
-        <p>
-        </p>
+        &nbsp;
+        <label for="sortAlpha">Sort. Cyfr.</label>
+        &nbsp;
+        <br/>
+        <br/>
+        <img src="../../../assets/img/cb-on.svg" #selsb id="selSb" class="sort-active" (click)="selSb()"/>
+        &nbsp;
+        <label for="selSb">Aparat represji</label>
+        &nbsp;
+        <img src="../../../assets/img/cb-on.svg" #seltw id="selTw" class="sort-active" (click)="selTw()"/>
+        &nbsp;
+        <label for="selTw">Tajni Wsp.</label>
+        &nbsp;
+        <img src="../../../assets/img/cb-on.svg" #selop id="selOp" class="sort-active" (click)="selOp()"/>
+        &nbsp;
+        <label for="selOp">Opozycjoniści</label>
+        &nbsp;
+        <img src="../../../assets/img/cb-on.svg" #selit id="selIt" class="sort-active" (click)="selIt()"/>
+        &nbsp;
+        <label for="selIt">Internowani</label>
+        <br/>
+        <br/>
       </div>
       <div *ngIf="ready">
-        <div *ngFor="let index of indexes">
+        <div *ngFor="let index of indexes" [class]="index.class">
             <b>{{index.name}}</b>
             <br/>
             <div *ngFor="let unit of index.units">

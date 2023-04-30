@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { HostListener } from '@angular/core';
@@ -18,6 +18,11 @@ export class IndeksComponent implements OnInit  {
   public indexes: Index[];
   public dataAlpha: Index[];
   public dataNum: Index[];
+  public bSb: boolean;
+  public bTw: boolean;
+  public bOp: boolean;
+  public bIt: boolean;
+  public sheet;
 
   constructor(
     // private route: ActivatedRoute,
@@ -31,11 +36,25 @@ export class IndeksComponent implements OnInit  {
     this.dataAlpha = [];
     this.dataNum = [];
     this.indexes = [];
+    this.bSb = true;
+    this.bTw = true;
+    this.bOp = true;
+    this.bIt = true;
+    this.selsb = {} as ElementRef;
+    this.seltw = {} as ElementRef;
+    this.selop = {} as ElementRef;
+    this.selit = {} as ElementRef;
+    this.sheet = new CSSStyleSheet();
   }
+  @ViewChild('selsb') selsb: ElementRef;
+  @ViewChild('seltw') seltw: ElementRef;
+  @ViewChild('selop') selop: ElementRef;
+  @ViewChild('selit') selit: ElementRef;
 
   ngOnInit(): void {
     console.log('onInit()')
     this.ready = false;
+    this.setCss();
     this.http.get<Index[]>('assets/json/indeks.json')
     .subscribe({
       next: (data) => { 
@@ -63,9 +82,6 @@ export class IndeksComponent implements OnInit  {
     document.getElementById('sortAlpha')?.classList.remove('sort-active');
     document.getElementById('sortNum')?.classList.add('sort-active');
     document.getElementById('sortAlpha')?.classList.add('sort-inactive');
-    // this.indexes = this.indexes.sort((a,b) => a.name >= b.name);
-    // this.indexes = this.dataAlpha;
-    // alert('alpha');
   }
 
   sortNum() {
@@ -75,8 +91,6 @@ export class IndeksComponent implements OnInit  {
     document.getElementById('sortAlpha')?.classList.add('sort-active');
     document.getElementById('sortNum')?.classList.add('sort-inactive');
     this.indexes = this.indexes.sort((a,b) => b.count - a.count);
-    // this.indexes = this.dataNum;
-    // alert('num');
   }
 
   compareAlpha( a: any, b: any ) {
@@ -123,10 +137,52 @@ export class IndeksComponent implements OnInit  {
     return i_str;
   }
 
+  selSb() {
+    const selSb: HTMLImageElement = this.selsb.nativeElement;
+    this.bSb = this.switchCb(selSb);
+    this.setCss();
+  }
+
+  selTw() {
+    const selTw: HTMLImageElement = this.seltw.nativeElement;
+    this.bTw = this.switchCb(selTw);
+    this.setCss();
+  }
+
+  selOp() {
+    const selOp: HTMLImageElement = this.selop.nativeElement;
+    this.bOp = this.switchCb(selOp);
+    this.setCss();
+  }
+
+  selIt() {
+    const selIt: HTMLImageElement = this.selit.nativeElement;
+    this.bIt = this.switchCb(selIt);
+    this.setCss();
+  }
+
+  switchCb(cbElm: HTMLImageElement) {
+    const base = "http://teczka.sarata.pl/assets/img/";
+    let b = cbElm.src.toLowerCase().includes('cb-on.svg');
+    b = !b;
+    cbElm.src = base + (b ? "cb-on.svg" : "cb-off.svg");
+    return b;
+  }
+
+  setCss() {
+    let style = '';
+    style += '.SB ' + (this.bSb ? '{} ' : '{display: none;} '); 
+    style += '.TW ' + (this.bTw ? '{} ' : '{display: none;} '); 
+    style += '.OP ' + (this.bOp ? '{} ' : '{display: none;} '); 
+    style += '.IT ' + (this.bIt ? '{} ' : '{display: none;} '); 
+    this.sheet.replaceSync(style);
+    document.adoptedStyleSheets = [this.sheet];
+}
 }
 
 interface Index {
   name: string;
+  class: string;
   count: number;
   units: Unit[];
 }
