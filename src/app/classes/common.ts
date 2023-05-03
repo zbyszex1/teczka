@@ -19,9 +19,9 @@ export class Common {
     let numbers = new Array<string>(num);
     for(let i=0; i<num; i++) {
       let i_str = (i+pMin).toString();
-      if (i <= 99)
+      if (i < 99)
         i_str = '0' + i_str;
-      if (i <= 9)
+      if (i < 9)
         i_str = '0' + i_str;
       numbers[i] = i_str;
     }
@@ -35,14 +35,14 @@ export class Common {
       path = urls[0].path;
     switch(urls[0].path)
     {
-      case 'tom1':
+      case 'doc/tom1':
         path = '/assets/vol1/';
         break;
-      case 'tom2':
+      case 'doc/tom2':
         path = '/assets/vol2/';
         break;
       default:
-        path = '/assets/other/';
+        path = '/assets/doc/';
         break;
     }
     return path;

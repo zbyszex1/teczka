@@ -37,6 +37,7 @@ import { JailComponent } from './pages/jail/jail.component';
 import { BlankComponent } from './pages/blank/blank.component';
 import { IndeksComponent } from './pages/indeks/indeks.component';
 import { SortByCountPipe } from './pipes/sort-by-count.pipe';
+import { LinksComponent } from './pages/links/links.component';
 
 @NgModule({
   declarations: [
@@ -73,6 +74,7 @@ import { SortByCountPipe } from './pipes/sort-by-count.pipe';
     BlankComponent,
     IndeksComponent,
     SortByCountPipe,
+    LinksComponent,
   ],
   imports: [
     FormsModule,

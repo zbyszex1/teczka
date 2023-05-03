@@ -9,25 +9,42 @@ export class NavbarComponent implements OnInit{
 
   constructor() {
     this.open = false;    
-    this.ariaO = false;
     this.ariaI = false;
+    this.ariaII = false;
+    this.ariaIII = false;
   }
 
   open: boolean;
-  ariaO: boolean;
   ariaI: boolean;
+  ariaII: boolean;
+  ariaIII: boolean;
 
   ngOnInit() {
 
   }
 
-  onDropdownO(): void {
-    this.ariaO = !this.ariaO;
+  onClick() {
+    this.open = false;
     this.ariaI = false;
+    this.ariaII = false;
+    this.ariaIII = false;
   }
 
   onDropdownI(): void {
-    this.ariaO = false;
     this.ariaI = !this.ariaI;
+    this.ariaII = false;
+    this.ariaIII = false;
+  }
+
+  onDropdownII(): void {
+    this.ariaI = false;
+    this.ariaII = !this.ariaII;
+    this.ariaIII = false;
+  }
+
+  onDropdownIII(): void {
+    this.ariaI = false;
+    this.ariaII = false;
+    this.ariaIII = !this.ariaIII;
   }
 }

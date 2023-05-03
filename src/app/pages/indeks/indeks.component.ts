@@ -18,9 +18,10 @@ export class IndeksComponent implements OnInit  {
   public indexes: Index[];
   public dataAlpha: Index[];
   public dataNum: Index[];
+  public bPz: boolean;
+  public bOp: boolean;
   public bSb: boolean;
   public bTw: boolean;
-  public bOp: boolean;
   public bIt: boolean;
   public sheet;
 
@@ -36,19 +37,22 @@ export class IndeksComponent implements OnInit  {
     this.dataAlpha = [];
     this.dataNum = [];
     this.indexes = [];
+    this.bPz = true;
+    this.bOp = true;
     this.bSb = true;
     this.bTw = true;
-    this.bOp = true;
     this.bIt = true;
+    this.selpz = {} as ElementRef;
+    this.selop = {} as ElementRef;
     this.selsb = {} as ElementRef;
     this.seltw = {} as ElementRef;
-    this.selop = {} as ElementRef;
     this.selit = {} as ElementRef;
     this.sheet = new CSSStyleSheet();
   }
+  @ViewChild('selpz') selpz: ElementRef;
+  @ViewChild('selop') selop: ElementRef;
   @ViewChild('selsb') selsb: ElementRef;
   @ViewChild('seltw') seltw: ElementRef;
-  @ViewChild('selop') selop: ElementRef;
   @ViewChild('selit') selit: ElementRef;
 
   ngOnInit(): void {
@@ -137,6 +141,20 @@ export class IndeksComponent implements OnInit  {
     return i_str;
   }
 
+  selPz() {
+    const selPz: HTMLImageElement = this.selpz.nativeElement;
+    console.log(selPz)
+    this.bPz = this.switchCb(selPz);
+    this.setCss();
+    console.log(selPz)
+  }
+
+  selOp() {
+    const selOp: HTMLImageElement = this.selop.nativeElement;
+    this.bOp = this.switchCb(selOp);
+    this.setCss();
+  }
+
   selSb() {
     const selSb: HTMLImageElement = this.selsb.nativeElement;
     this.bSb = this.switchCb(selSb);
@@ -146,12 +164,6 @@ export class IndeksComponent implements OnInit  {
   selTw() {
     const selTw: HTMLImageElement = this.seltw.nativeElement;
     this.bTw = this.switchCb(selTw);
-    this.setCss();
-  }
-
-  selOp() {
-    const selOp: HTMLImageElement = this.selop.nativeElement;
-    this.bOp = this.switchCb(selOp);
     this.setCss();
   }
 
@@ -171,9 +183,10 @@ export class IndeksComponent implements OnInit  {
 
   setCss() {
     let style = '';
+    style += '.PZ ' + (this.bPz ? '{} ' : '{display: none;} '); 
+    style += '.OP ' + (this.bOp ? '{} ' : '{display: none;} '); 
     style += '.SB ' + (this.bSb ? '{} ' : '{display: none;} '); 
     style += '.TW ' + (this.bTw ? '{} ' : '{display: none;} '); 
-    style += '.OP ' + (this.bOp ? '{} ' : '{display: none;} '); 
     style += '.IT ' + (this.bIt ? '{} ' : '{display: none;} '); 
     this.sheet.replaceSync(style);
     document.adoptedStyleSheets = [this.sheet];

@@ -1,6 +1,6 @@
 {
-  "router": "other/pisma",
-  "routerDet": "other/pisma",
+  "router": "doc/pisma",
+  "routerDet": "doc/pisma",
   "thumbs": "/assets/other/pisma/thumbs/",
   "pages": "/assets/other/pisma/pages/",
   "pdf": "/assets/pdf/pisma.pdf",

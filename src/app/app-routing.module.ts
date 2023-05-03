@@ -13,6 +13,7 @@ import { KorComponent } from './pages/kor/kor.component';
 import { BiComponent } from './pages/bi/bi.component';
 import { JailComponent } from './pages/jail/jail.component';
 import { IndeksComponent } from './pages/indeks/indeks.component';
+import { LinksComponent } from './pages/links/links.component';
 import { MazowszeComponent } from './pages/mazowsze/mazowsze.component';
 import { OtherComponent } from './pages/other/other.component';
 import { AboutComponent } from './pages/about/about.component';
@@ -25,17 +26,15 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
-  { path: 'tom1', component: Tom1Component },
-  { path: 'tom2', component: Tom2Component },
-  { path: 'tom1/:page_number', component: PageComponent },
-  { path: 'tom2/:page_number', component: PageComponent },
-  { path: 'other',
+  { path: 'doc',
     children: [
+      { path: 'tom1', component: Tom1Component },
+      { path: 'tom1/:page_number', component: PageComponent },
+      { path: 'tom2', component: Tom2Component },
+      { path: 'tom2/:page_number', component: PageComponent },
       { path: 'pisma', component: PismaComponent },
       { path: 'pisma/:page_number', component: PageComponent },
       { path: 'tw', component: TwComponent },
-      { path: 'jail', component: JailComponent },
-      { path: 'jail/:page_number', component: PageComponent },
       { path: 'tw0/:page_number', component: PageComponent },
       { path: 'tw1/:page_number', component: PageComponent },
       { path: 'tw2/:page_number', component: PageComponent },
@@ -70,18 +69,25 @@ const routes: Routes = [
       { path: 'mazowsze5/:page_number', component: PageComponent },
       { path: 'mazowsze6/:page_number', component: PageComponent },
       { path: 'mazowsze7/:page_number', component: PageComponent },
-      { path: 'other', component: OtherComponent },
-      { path: 'other1/:page_number', component: PageComponent },
-      { path: 'other2/:page_number', component: PageComponent },
-      { path: 'other3/:page_number', component: PageComponent },
-      { path: 'other4/:page_number', component: PageComponent }
+      { path: 'intern', component: OtherComponent },
+      { path: 'intern1/:page_number', component: PageComponent },
+      { path: 'intern2/:page_number', component: PageComponent },
     ]
   },
-  { path: 'indeks', component: IndeksComponent },
-  { path: 'info', component: AboutComponent },
-  { path: 'kontakt', component: ContactComponent },
-  { path: 'warunki', component: ConditionsComponent },
-  { path: 'pomoc', component: HelpComponent },
+  { path: 'stat',
+    children: [
+      { path: 'indeks', component: IndeksComponent },
+      { path: 'links', component: LinksComponent }
+    ]
+  },
+  { path: 'info',
+    children: [
+      { path: 'info', component: AboutComponent },
+      { path: 'kontakt', component: ContactComponent },
+      { path: 'warunki', component: ConditionsComponent },
+      { path: 'pomoc', component: HelpComponent }
+        ]
+  },
   { path: 'page-not-found', component: PageNotFoundComponent },
   { path: 'blank', component: BlankComponent },
   { path: '**', component: PageNotFoundComponent },

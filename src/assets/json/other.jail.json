@@ -1,6 +1,6 @@
 {
-  "router": "other/jail",
-  "routerDet": "other/jail",
+  "router": "doc/jail",
+  "routerDet": "doc/jail",
   "thumbs": "/assets/other/jail/thumbs/",
   "pages": "/assets/other/jail/pages/",
   "pdf": "/assets/pdf/2020-10/IPN_Wa_S_28.2005.Zk.pdf",

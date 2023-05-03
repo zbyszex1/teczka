@@ -113,7 +113,15 @@ export class PageComponent implements OnInit {
         }
         jname += urls[i].path
       }
+      jname = jname.replace('doc.', 'other.')
+      const i1 = jname.indexOf('tom1');
+      const i2 = jname.indexOf('tom2');
+      if (i1>0)
+        jname = jname.substring(i1);
+        if (i2>0)
+        jname = jname.substring(i2);
       console.log(jname)
+
       // if (urls.length > 0)
       //   jname = urls[0].path;
       // if (urls.length > 2)

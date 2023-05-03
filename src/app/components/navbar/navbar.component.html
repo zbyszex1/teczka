@@ -11,45 +11,49 @@
          [class.show]="open">
       <ul class="navbar-nav">
         <li class="nav-item active">
-          <a class="nav-link" routerLink="/" (click)="open = false; ariaO = false; ariaI = false;">Start</a>
+          <a class="nav-link" routerLink="/" (click)="open = false; ariaI = false; ariaII = false; ariaIII = false;">Start</a>
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a class="nav-link" routerLink="/tom1" (click)="open = false; ariaO = false; ariaI = false;">Tom 1</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" routerLink="tom2" (click)="open = false; ariaO = false; ariaI = false;">Tom 2</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" id="navbarDropdownO" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false" (click)="onDropdownO()">
-            Pozostałe
-          </a>
-          <div class="dropdown-menu" [class.dropdown-show]="ariaO" aria-labelledby="navbarDropdownO">
-            <a class="dropdown-item" routerLink="/other/kor" (click)="open = false; ariaO = false; ariaI = false;">KOR - "Gracze"</a>
-            <a class="dropdown-item" routerLink="/other/bi" (click)="open = false; ariaO = false; ariaI = false;">Biuro Interwencji</a>
-            <a class="dropdown-item" routerLink="/other/mazowsze" (click)="open = false; ariaO = false; ariaI = false;">Region Mazowsze</a>
-            <a class="dropdown-item" routerLink="/other/gdansk" (click)="open = false; ariaO = false; ariaI = false;">Materiały z Gdańska</a>
-            <a class="dropdown-item" routerLink="/other/ukf" (click)="open = false; ariaO = false; ariaI = false;">Nadajniki UKF</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" routerLink="/other/jail" (click)="open = false; ariaO = false; ariaI = false;">Więzienie</a>
-            <a class="dropdown-item" routerLink="/other/tw" (click)="open = false; ariaO = false; ariaI = false;">TW i SBcy</a>
-            <a class="dropdown-item" routerLink="/other/other" (click)="open = false; ariaO = false; ariaI = false;">Pozostałe materiały</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" routerLink="/other/pisma" (click)="open = false; ariaO = false; ariaI = false;">Korespondencja</a>
-          </div>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" routerLink="/indeks" (click)="open = false; ariaO = false; ariaI = false;">Indeks</a>
-        </li>
+        </li> -->
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" id="navbarDropdownI" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false" (click)="onDropdownI()">
-            Informacje
-          </a>
+            aria-haspopup="true" aria-expanded="false" (click)="onDropdownI()">Dokumenty</a>
           <div class="dropdown-menu" [class.dropdown-show]="ariaI" aria-labelledby="navbarDropdownI">
-            <a class="dropdown-item" routerLink="/info" (click)="open = false; ariaO = false; ariaI = false;">O stronie</a>
-            <a class="dropdown-item" routerLink="/kontakt" (click)="open = false; ariaO = false; ariaI = false;">Kontakt</a>
-            <a class="dropdown-item" routerLink="/pomoc" (click)="open = false; ariaO = false; ariaI = false;">Pomoc</a>
+            <a class="dropdown-item" routerLink="/doc/tom1" (click)="onClick()">Inżynier - tom1</a>
+            <a class="dropdown-item" routerLink="/doc/tom2" (click)="onClick()">Inżynier - tom2</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" routerLink="/doc/kor" (click)="onClick()">KOR - "Gracze"</a>
+            <a class="dropdown-item" routerLink="/doc/bi" (click)="onClick()">Biuro Interwencji</a>
+            <a class="dropdown-item" routerLink="/doc/mazowsze" (click)="onClick()">Region Mazowsze</a>
+            <a class="dropdown-item" routerLink="/doc/gdansk" (click)="onClick()">Materiały z Gdańska</a>
+            <a class="dropdown-item" routerLink="/doc/ukf" (click)="onClick()">Nadajniki UKF</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" routerLink="/doc/jail" (click)="onClick()">Więzienie</a>
+            <a class="dropdown-item" routerLink="/doc/tw" (click)="onClick()">TW i SBcy</a>
+            <a class="dropdown-item" routerLink="/doc/intern" (click)="onClick()">Internowani</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" routerLink="/doc/pisma" (click)="onClick()">Korespondencja</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdownII" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false" (click)="onDropdownII()">Statystyki</a>
+          <div class="dropdown-menu" [class.dropdown-show]="ariaII" aria-labelledby="navbarDropdownII">
+            <a class="dropdown-item" routerLink="/stat/indeks" (click)="onClick()">Indeks nazwisk</a>
+            <!-- <a class="dropdown-item" routerLink="/stat/links" (click)="onClick()">Powiązania</a> -->
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdownIII" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false" (click)="onDropdownIII()">Informacje</a>
+          <div class="dropdown-menu" [class.dropdown-show]="ariaIII" aria-labelledby="navbarDropdownIII">
+            <a class="dropdown-item" routerLink="/info/info" (click)="onClick()">O stronie</a>
+            <a class="dropdown-item" routerLink="/info/kontakt" (click)="onClick()">Kontakt</a>
+            <a class="dropdown-item" routerLink="/info/pomoc" (click)="onClick()">Pomoc</a>
           </div>
         </li>
       </ul>
