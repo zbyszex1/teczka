@@ -1,1 +1,99 @@
-<p>links works!</p>
+<div class="container printable">
+    <h2 class="mt-4 text-center">Powiązania nazwisk</h2>
+    <div>
+        <p>
+            Skoro sporządziłem indeks osób wymienionych w materiałach SB wydało mi interesującą możliwością znalezienie
+            powiązań pomiędzy poszczególnymi nazwiskami. Przyjąłem założenie, że powiązanie pomiędzy dwoma nazwiskami istnieje,
+            jeżeli są one wymienione na tej samej stronie zeskanowanego dokumentu. Zdaje sobie sprawę, że nie jest ono doskonałe
+            bo na przykład pomija przypadki gdy nazwiska znajdują się na sąsiednich stronach tego samego dokumentu. Jednak w takim
+            przypadku nie można byłby wygenerować odnośnika do odpowiedniego skanu. Jakieś założenie musiałem przyjąć.
+        </p>
+        <p>
+            Z powiązań wykluczyłem spisy internowanych. Rzekome powiązania mogłyby jedynie wynikać z sąsiadujących pozycji
+            na listach zapisywanych alfabetycznie lub wynikających z internowania w podobnym czasie.
+        </p>
+        <p>
+            Korzystając z tego narzędzie trzeba pamiętać że teczka dotyczyła inwigilacji mnie i Oli. Nasze nazwiska pojawiają się
+            najczęściej. Dlatego dodałem możliwość odfiltrowania nas. Ale nawet sprawdzając 5 najczęściej powiązanych osób ze mną
+            i z Olą widać różnice. Dokumenty najczęściej kojarzą mnie ze Zbyszkiem Romaszewskim, Henrykiem Wujcem i Jackiem Kuroniem.
+            Ola kojarzona była najczęściej z Ewą i Tomaszem Korulskimi obraz Barbarą Różycką. Wspólne mamy zaś nazwiska
+            Zofii Romaszewskiej i Anatola Lawiny. 
+        </p>
+        <p>
+            Powiązania dają rzeczywisty obraz zaangażowania poszczególnych osób w działalność opozycyjną.
+            Niekwestionowanym liderem KORu był Jacek Kuroń. Jeżeli wyszukamy jego powiązań z innymi osobami - listę rozpoczną
+            Adam Michnik, Henryk Wujec, Jan Lityński i Zbigniew Romaszewski. Dopiero dalej pojawią się nazwiska Antoniego
+            Macierewicza, Edwarda Lipińskiego i Jana Józefa Lipskiego.
+        </p>
+    </div>
+    <div class="row py-4">
+        <div *ngIf="personsReady">
+            <label class="form-label">Wszystkie nazwiska z bazy danych</label>
+            <div>
+                <select class="form-control" 
+                    [ngModel]="persons" 
+                    style="width: 500px;"
+                    (ngModelChange)="onPerson($event)">
+                    <option *ngFor="let person of persons" [ngValue]="person.id">{{person.name}}</option>
+                </select>
+            </div>
+            <div>
+                <!-- <img src="../../../assets/img/cb-on.svg" #selsa id="selsa" class="sort-inactive" (click)="selSa()"/>
+                &nbsp;
+                <label class="form-label">Filtrowanie Zbigniewa i Aleksandry Saratów</label>
+                <span> </span> -->
+                <button class="btn btn-primary" (click)="resetFilter()">
+                    <span>Pokaż wszystkie powiązania</span>
+                </button>
+                <button class="btn btn-primary" (click)="setFilter()">
+                    <span>Pokaż powiązania bez Saratów</span>
+                </button>
+            </div>
+        </div>
+        <div style="margin-top: 1rem;">
+        <img src="../../../assets/img/sort-alpha.svg" id="sortAlpha" class="sort-inactive" (click)="sortAlpha()"/>
+        &nbsp;
+        <img src="../../../assets/img/sort-num.svg" id="sortNum" class="sort-active" (click)="sortNum()"/>
+        &nbsp;
+        <label for="sortAlpha">Sortowanie rekordów</label>
+        &nbsp;
+        <br/>
+        <br/>
+        <img src="../../../assets/img/cb-on.svg" #selsb id="selSb" class="sort-active" (click)="selSb()"/>
+        &nbsp;
+        <label for="selSb">Aparat represji</label>
+        &nbsp;
+        <img src="../../../assets/img/cb-on.svg" #seltw id="selTw" class="sort-active" (click)="selTw()"/>
+        &nbsp;
+        <label for="selTw">Tajni Wsp.</label>
+        &nbsp;
+        <img src="../../../assets/img/cb-on.svg" #selop id="selOp" class="sort-active" (click)="selOp()"/>
+        &nbsp;
+        <label for="selOp">Opozycjoniści</label>
+        &nbsp;
+        <img src="../../../assets/img/cb-on.svg" #selpz id="selPz" class="sort-active" (click)="selPz()"/>
+        &nbsp;
+        <label for="selPz">Pozostali</label>
+        <br/>
+        <br/>
+      </div>
+      <div *ngIf="ready">
+        <div *ngFor="let index of indexes" [class]="index?.class">
+            <div *ngIf="index !=null">
+                    <b>{{index.name}}</b>&nbsp;&nbsp;&nbsp;&nbsp;<small>[{{index.count}}]</small>
+                <br/>
+                <div *ngFor="let unit of index.units">
+                    <div *ngIf="unit !=null">
+                        <span>{{unit.display}}</span>
+                        <span *ngFor="let page of unit.pages; let i = index">
+                        <span *ngIf="i==0">: </span>
+                        <span *ngIf="i>0">, </span>
+                        <a [href]="unit.path+'/'+fillZeros(page)" target="_blank" class="link"><b>{{page}}</b></a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+</div>
+</div>

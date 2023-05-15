@@ -5,23 +5,24 @@
         To, że ja i Ola pojawiamy się najczęściej nie powinno dziwić. Wszak teczka nas dotyczy. Dalej także bez niespodzianek:
         Jacek Kuroń, Zbigniew Romaszewski, Henryk Wujec, Adam Michnik i Jan Lityński. Wysoko plasują się oficerowie SB:
         Sebastian Sadoch i Zygmunt Wytrwał. Bardzo pracowici byli tajni współpracownicy: Krystyna Iwaszkiewcz i Lech Matul.
-        Dalsze miejsca takich osób jak Anatol Lawina, Mirosław Chojecki, Dariusz Kupiecki, Witold Łuczywo czy Teodor Klinewicz
+        Dalsze miejsca takich osób jak Anatol Lawina, Mirosław Chojecki, Dariusz Kupiecki, Witold Łuczywo czy Teodor Klincewicz
         nie znaczą, że oni mniej działali. Po prostu ich zaangażowanie wymagało konspiracji, która na ogół się udawała.
       </p>
       <p>
         Uwagi do filtrowania. W grupie "Aparat represji" są prokuratorzy, funkcjonariusze Służby Bezpieczeństwa, MO, wojska i służby
         więziennej. Tajni współpracownicy to również ci, którzy dobrowolnie składali zeznania obciążające swoje koleżanki i
         swoich kolegów z podziemia. Do opozycjonistów zaliczyłem osoby działające wtedy, kiedy groziły represje. Czyli przed
-        31 sierpniem 1980 i po 13 grudnia 1981. Zaliczyłem do nich rówież represjonowanych w czasach Solidarności funkcjonariuszy MO.
-        Wiele nazwisk występuje wyłącznie na listach internowanych. To czwarta kategoria. Do piatej - zaliczyłem pozostałych
+        31 sierpniem 1980 i po 13 grudnia 1981. Zaliczyłem do nich również represjonowanych w czasach Solidarności funkcjonariuszy MO.
+        Wiele nieznanych mi nazwisk występuje wyłącznie na listach internowanych. To czwarta kategoria. Do piątej - zaliczyłem pozostałych
         wymienionych w dokumentach a np. byli zanotowani wyłącznie jako moi koledzy z pracy lub jedynie podpisali jakiś apel.
       </p>
       <p>
-        Większości internowanych nie znam. Oczywiście kojarzę nazwiska większość tych, którzy działali przed 1980 rokiem
+        Oczywiście kojarzę nazwiska większość tych, którzy działali przed 1980 rokiem
         i części osób z Regionu Mazowsze. W Białołęce poznałem sporo działaczy Solidarności. Ale było nas naprawdę wielu.
         Siedzieliśmy w dwóch barakach. Była pewna rotacja. Jedni wychodzili, inni zostali złapani później, niż 13 grudnia 1981.
-        Końcówka listy internowanych jest pisana ręcznie. Niektórych nazwisk nie umiałem odczytać. Przepraszam za pomyłki.
-        Chętnie poprawię, jeżeli ktoś zasygnalizuje błąd.
+        Końcówka listy internowanych jest pisana ręcznie. Niektórych nazwisk nie umiałem odczytać. Ale od czego ma się przyjaciół.
+        Ludka Wujec wyłapywała powtórzenia, poprawiła kilkadziesiąt imion i nazwisk. Bardzo proszę również inne osoby, które
+        trafią na stronę o zgłaszanie błędów.
       </p>
     </div>
     <div class="row py-4">
@@ -58,7 +59,7 @@
       </div>
       <div *ngIf="ready">
         <div *ngFor="let index of indexes" [class]="index.class">
-            <b>{{index.name}}</b>
+            <b>{{index.name}}</b>&nbsp;&nbsp;&nbsp;&nbsp;<small>[{{index.count}}]</small>
             <br/>
             <div *ngFor="let unit of index.units">
                 <span>{{unit.display}}</span>

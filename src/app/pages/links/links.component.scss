@@ -1,0 +1,26 @@
+.help-aera {
+    display: grid;
+    grid-template-columns: repeat( 5, 1fr);
+  }
+  
+  .help-image {
+    background-color: transparent;
+    grid-column-start: 1;
+    padding: 10px;
+  }
+  
+  .help-text {
+    background-color: transparent;
+    grid-column-start: 2;
+    grid-column-end: span 3;
+  }
+  
+  .sort-inactive{
+    filter: grayscale(1) opacity(33%) ;
+    cursor: default;
+  }
+
+  .sort-active{
+    filter: hue-rotate(100);
+    cursor: pointer;
+  }
