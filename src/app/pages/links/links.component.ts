@@ -87,7 +87,8 @@ export class LinksComponent  implements OnInit  {
         let idx = 1;
         this.indexes.forEach( indeks => {
           let person = {id: indeks.personId, name: this.getPerson(indeks) };
-          this.persons.push(person);
+          if( indeks.class != 'IT')
+            this.persons.push(person);
         })
         this.personsReady = true;
         data.forEach(element => {
