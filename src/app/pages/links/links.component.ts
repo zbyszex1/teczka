@@ -47,8 +47,8 @@ export class LinksComponent  implements OnInit  {
     this.indexes = [];
     this.indexesBase = [];
     this.masterData = new Index();
-    this.filter = false;
-    this.sortN = false;
+    this.filter = true;
+    this.sortN = true;
     this.message = '';
     this.loading = false;
     this.ready = false;
@@ -129,10 +129,6 @@ export class LinksComponent  implements OnInit  {
     return indeks.name;
   }
 
-  onPerson(event: any) {
-    this.personId = event;
-  }
-
   fillZeros(val: number) {
     let i_str = val.toString();
     if (val <= 99)
@@ -182,7 +178,6 @@ export class LinksComponent  implements OnInit  {
         return false;
       }
       idx++;
-      // console.log(indeks.personId +' '+indeks.name)
       return true;
     })
     return master;
@@ -216,21 +211,26 @@ export class LinksComponent  implements OnInit  {
     return index;
   }
 
-  resetFilter() {
-    this.filter = false;
+  onPerson(event: any) {
+    this.personId = event;
     this.setPerson();
   }
 
-  setFilter() {
-    this.filter = true;
+  filterLinks() {
+    const selSa: HTMLImageElement = this.selsa.nativeElement;
+    this.filter = this.switchCb(selSa);
+    this.setCss();
     this.setPerson();
   }
-  
+
   setPerson() {
+    if (this.personId == 0) {
+      this.indexes = [];
+      return;
+    }
     this.copyIndexes();
     let master = this.findMasterIdx();
     this.masterData = this.copyIndex(this.indexesBase[master], false);
-    console.log(this.masterData)
     let idx = this.indexes.length;
     while (--idx >= 0) {
       if (idx != master ) {
@@ -264,7 +264,6 @@ export class LinksComponent  implements OnInit  {
     document.getElementById('sortNum')?.classList.remove('sort-active');
     document.getElementById('sortAlpha')?.classList.add('sort-active');
     document.getElementById('sortNum')?.classList.add('sort-inactive');
-    // this.indexes = this.indexes.sort((a,b) => b.count - a.count);
   }
 
   compareAlpha( a: any, b: any ) {
@@ -287,18 +286,11 @@ export class LinksComponent  implements OnInit  {
     return 0;
   }
 
-  selSa() {
-    const selSa: HTMLImageElement = this.selsa.nativeElement;
-    this.filter = this.switchCb(selSa);
-    this.setCss();
-  }
 
   selPz() {
     const selPz: HTMLImageElement = this.selpz.nativeElement;
-    console.log(selPz)
     this.bPz = this.switchCb(selPz);
     this.setCss();
-    console.log(selPz)
   }
 
   selOp() {

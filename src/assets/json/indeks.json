@@ -3015,19 +3015,23 @@
       {"display":"intern1","path":"doc/intern1","pages":[53]}
    ]
   },
-  {"name":"Komorowska Ewa","personId":177,"count":8,"class":"IT",
+  {"name":"Komorowska Ewa_(1)","personId":177,"count":6,"class":"PZ",
    "units":[
       {"display":"jail","path":"doc/jail","pages":[16,17,18,19]},
-      {"display":"intern1","path":"doc/intern1","pages":[21]},
       {"display":"tom1","path":"doc/tom1","pages":[227]},
-      {"display":"tom2","path":"doc/tom2","pages":[141,153]}
+      {"display":"tom2","path":"doc/tom2","pages":[153]}
    ]
   },
-  {"name":"Komorowska Maja","personId":898,"count":13,"class":"PZ",
+  {"name":"Komorowska Ewa_(2)","personId":1475,"count":1,"class":"IT",
+   "units":[
+      {"display":"intern1","path":"doc/intern1","pages":[21]}
+   ]
+  },
+  {"name":"Komorowska Maja","personId":898,"count":14,"class":"PZ",
    "units":[
       {"display":"mazowsze7","path":"doc/mazowsze7","pages":[5]},
       {"display":"tom1","path":"doc/tom1","pages":[103,261,263]},
-      {"display":"tom2","path":"doc/tom2","pages":[20,51,108,113,114,116,140,155,163]}
+      {"display":"tom2","path":"doc/tom2","pages":[20,51,108,113,114,116,140,141,155,163]}
    ]
   },
   {"name":"Komorowski Bronisław","personId":178,"count":1,"class":"OP",
@@ -6171,7 +6175,7 @@
       {"display":"intern1","path":"doc/intern1","pages":[64]}
    ]
   },
-  {"name":"Sierański Ireneusz","personId":342,"count":3,"class":"IT",
+  {"name":"Sierański Ireneusz","personId":342,"count":3,"class":"OP",
    "units":[
       {"display":"intern1","path":"doc/intern1","pages":[38]},
       {"display":"intern2","path":"doc/intern2","pages":[7,12]}

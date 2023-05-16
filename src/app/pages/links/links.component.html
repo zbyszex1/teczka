@@ -38,22 +38,15 @@
                 </select>
             </div>
             <div>
-                <!-- <img src="../../../assets/img/cb-on.svg" #selsa id="selsa" class="sort-inactive" (click)="selSa()"/>
+                <img src="../../../assets/img/cb-on.svg" #selsa id="selSa" class="sort-active" (click)="filterLinks()"/>
                 &nbsp;
-                <label class="form-label">Filtrowanie Zbigniewa i Aleksandry Saratów</label>
-                <span> </span> -->
-                <button class="btn btn-primary" (click)="resetFilter()">
-                    <span>Pokaż wszystkie powiązania</span>
-                </button>
-                <button class="btn btn-primary" (click)="setFilter()">
-                    <span>Pokaż powiązania bez Saratów</span>
-                </button>
+                <label for="filter">Pomiń figurantów teczki</label>
             </div>
         </div>
         <div style="margin-top: 1rem;">
-        <img src="../../../assets/img/sort-alpha.svg" id="sortAlpha" class="sort-inactive" (click)="sortAlpha()"/>
+        <img src="../../../assets/img/sort-alpha.svg" id="sortAlpha" class="sort-active" (click)="sortAlpha()"/>
         &nbsp;
-        <img src="../../../assets/img/sort-num.svg" id="sortNum" class="sort-active" (click)="sortNum()"/>
+        <img src="../../../assets/img/sort-num.svg" id="sortNum" class="sort-inactive" (click)="sortNum()"/>
         &nbsp;
         <label for="sortAlpha">Sortowanie rekordów</label>
         &nbsp;
